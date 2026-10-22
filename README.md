@@ -1,4 +1,4 @@
-# IIoT Wi-Fi Deauthentication Resilience — Attack Simulation \& Detection
+# IIoT Wi-Fi Deauthentication Resilience 
 
 A security-research tool developed for my BSc (Hons) Cyber Security and Networks dissertation at the **University of East London**, investigating the resilience of **Industrial IoT (IIoT) Wi-Fi** networks to IEEE 802.11 **deauthentication attacks**, and the effectiveness of **Protected Management Frames (PMF / 802.11w)** as a countermeasure.
 
