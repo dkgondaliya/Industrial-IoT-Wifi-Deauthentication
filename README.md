@@ -1,11 +1,13 @@
-# IIoT Wi-Fi Deauthentication Resilience 
+# IIoT Wi-Fi Deauthentication Resilience
 
-A security-research tool developed for my BSc (Hons) Cyber Security and Networks dissertation at the **University of East London**, investigating the resilience of **Industrial IoT (IIoT) Wi-Fi** networks to IEEE 802.11 **deauthentication attacks**, and the effectiveness of **Protected Management Frames (PMF / 802.11w)** as a countermeasure.
+This project investigates the resilience of **Industrial IoT (IIoT) Wi-Fi** networks to IEEE 802.11 **deauthentication attacks**, and the effectiveness of **Protected Management Frames (PMF / 802.11w)** as a countermeasure. 
 
-The tool has two components:
+It combines two components:
 
-* an **attack-simulation module** that forges and transmits deauthentication frames to test the resilience of access points and stations in a controlled laboratory; and
-* a **passive detector** that monitors for deauthentication floods, fingerprints nearby networks (WPA2 / WPA3 / transition mode), and reports whether each network is protected by PMF.
+* an **attack-simulation module**, derived from [`wifijammer`](https://github.com/DanMcInerney/wifijammer) by **Dan McInerney**, which forges and transmits deauthentication frames to test the resilience of access points and stations in a controlled laboratory; and
+* a **passive detector (my own addition)** that monitors for deauthentication floods, fingerprints nearby networks (WPA2 / WPA3 / transition mode), parses RSN information elements, and reports whether each network is protected by PMF.
+
+> \*\*Attribution.\*\* The deauthentication engine is based on Dan McInerney's `wifijammer` (see \[Acknowledgements and licence](#acknowledgements-and-licence)). The deauth-flood detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study and findings are my own work.
 
 \---
 
@@ -17,7 +19,7 @@ Running the attack-simulation component against any network, access point or dev
 
 * Use the attack component **only** inside an **isolated lab** or on infrastructure you are explicitly authorised to assess.
 * The **detection component is passive** and transmits nothing.
-* The author accepts **no liability** for any misuse of this software.
+* Neither the author of this project nor the author of the original tool accepts any liability for misuse.
 
 \---
 
@@ -27,11 +29,14 @@ Deauthentication frames are unauthenticated 802.11 management frames, which hist
 
 ## Features
 
+**From the original `wifijammer`:** single-interface channel hopping; forging and transmission of deauthentication frames (targeted or broadcast) for authorised resilience testing.
+
+**Added in this project:**
+
 * Passive **deauth-flood detection** with configurable rate thresholds and time windows
 * **WPA2 / WPA3 / transition-mode** fingerprinting via RSN information-element parsing
 * **PMF (802.11w) detection** — distinguishes *PMF-required*, *PMF-capable*, and *no PMF*
 * Per-network **vulnerability assessment** based on the above
-* **Attack-simulation module** for authorised resilience testing (single-interface channel hopping and targeted/broadcast frames)
 * Live status reporting and optional alert **logging**
 * **Unit-tested** RSN/PMF parser and flood detector (`--test`)
 
@@ -75,11 +80,13 @@ python wifijammer.py --test
 
 > The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See \*\*Legal and ethical use\*\* above.
 
+## Acknowledgements and licence
+
+This project builds on [`wifijammer`](https://github.com/DanMcInerney/wifijammer) by **Dan McInerney**, which provides the deauthentication attack engine. That tool is distributed under its own licence (listed publicly as **BSD** — the `LICENSE` file in this repository is carried over from the original project, and the original copyright and licence are retained in full).
+
+Additions and modifications in this repository — the passive deauth detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study — are © Zeel Gondaliya and are released under the same licence as the original.
+
 ## Author
 
-**Zeel Gondaliya** — [LinkedIn](https://www.linkedin.com/in/zeel-gondaliya-9b48a2191) · <!-- add ORCID once created -->
-
-## License
-
-Released under the MIT License — see [`LICENSE`](LICENSE).
+**Zeel Gondaliya** — [LinkedIn](https://www.linkedin.com/in/zeel-gondaliya-9b48a2191) · <https://orcid.org/0009-0006-7509-1017>
 
