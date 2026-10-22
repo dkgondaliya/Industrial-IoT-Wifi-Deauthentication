@@ -1,13 +1,13 @@
 # IIoT Wi-Fi Deauthentication Resilience
 
-This project investigates the resilience of **Industrial IoT (IIoT) Wi-Fi** networks to IEEE 802.11 **deauthentication attacks**, and the effectiveness of **Protected Management Frames (PMF / 802.11w)** as a countermeasure. 
+This project investigates the resilience of **Industrial IoT (IIoT) Wi-Fi** networks to IEEE 802.11 **deauthentication attacks**, and the effectiveness of **Protected Management Frames (PMF / 802.11w)** as a countermeasure.
 
 It combines two components:
 
 * an **attack-simulation module**, derived from [`wifijammer`](https://github.com/DanMcInerney/wifijammer) by **Dan McInerney**, which forges and transmits deauthentication frames to test the resilience of access points and stations in a controlled laboratory; and
 * a **passive detector (my own addition)** that monitors for deauthentication floods, fingerprints nearby networks (WPA2 / WPA3 / transition mode), parses RSN information elements, and reports whether each network is protected by PMF.
 
-> \*\*Attribution.\*\* The deauthentication engine is based on Dan McInerney's `wifijammer` (see \[Acknowledgements and licence](#acknowledgements-and-licence)). The deauth-flood detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study and findings are my own work.
+> \\\*\\\*Attribution.\\\*\\\* The deauthentication engine is based on Dan McInerney's `wifijammer` (see \\\[Acknowledgements and licence](#acknowledgements-and-licence)). The deauth-flood detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study and findings are my own work.
 
 \---
 
@@ -78,15 +78,15 @@ Run the unit tests:
 python wifijammer.py --test
 ```
 
-> The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See \*\*Legal and ethical use\*\* above.
+> The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See \\\*\\\*Legal and ethical use\\\*\\\* above.
 
 ## Acknowledgements and licence
 
 This project builds on [`wifijammer`](https://github.com/DanMcInerney/wifijammer) by **Dan McInerney**, which provides the deauthentication attack engine. That tool is distributed under its own licence (listed publicly as **BSD** — the `LICENSE` file in this repository is carried over from the original project, and the original copyright and licence are retained in full).
 
-Additions and modifications in this repository — the passive deauth detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study — are © Zeel Gondaliya and are released under the same licence as the original.
+Additions and modifications in this repository the passive deauth detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study are © Zeel Gondaliya and are released under the same licence as the original.
 
 ## Author
 
-**Zeel Gondaliya** — [LinkedIn](https://www.linkedin.com/in/zeel-gondaliya-9b48a2191) · <https://orcid.org/0009-0006-7509-1017>
+**Zeel Gondaliya** — [LinkedIn](https://www.linkedin.com/in/zeel-gondaliya-9b48a2191) · [https://orcid.org/0009-0006-7509-1017](https://orcid.org/0009-0006-7509-1017)
 
