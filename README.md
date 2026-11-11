@@ -7,7 +7,7 @@ It combines two components:
 * an **attack-simulation module**, derived from [`wifijammer`](https://github.com/DanMcInerney/wifijammer) by **Dan McInerney**, which forges and transmits deauthentication frames to test the resilience of access points and stations in a controlled laboratory; and
 * a **passive detector (my own addition)** that monitors for deauthentication floods, fingerprints nearby networks (WPA2 / WPA3 / transition mode), parses RSN information elements, and reports whether each network is protected by PMF.
 
-> \\\*\\\*Attribution.\\\*\\\* The deauthentication engine is based on Dan McInerney's `wifijammer` (see \\\[Acknowledgements and licence](#acknowledgements-and-licence)). The deauth-flood detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study and findings are my own work.
+The deauthentication engine is based on Dan McInerney's `wifijammer` (see acknowledgements and licence). The deauth-flood detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study and findings are my own work.
 
 \---
 
@@ -78,7 +78,7 @@ Run the unit tests:
 python wifijammer.py --test
 ```
 
-> The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See \\\*\\\*Legal and ethical use\\\*\\\* above.
+> The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See \\\\\\\*\\\\\\\*Legal and ethical use\\\\\\\*\\\\\\\* above.
 
 ## Acknowledgements and licence
 
