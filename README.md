@@ -54,6 +54,7 @@ Deauthentication frames are unauthenticated 802.11 management frames, which hist
 git clone https://github.com/dkgondaliya/IIot-wifi-deauth-research.git
 cd IIot-wifi-deauth-research
 pip install -r requirements.txt
+```
 
 Put your adapter into monitor mode first (for example with `airmon-ng start wlan0`), which exposes an interface such as `wlan0mon`.
 
