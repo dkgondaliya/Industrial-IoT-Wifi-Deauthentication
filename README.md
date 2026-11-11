@@ -9,7 +9,7 @@ It combines two components:
 
 The deauthentication engine is based on Dan McInerney's `wifijammer` (see acknowledgements and licence). The deauth-flood detector, the WPA2/WPA3/PMF resilience analysis, the unit tests and the IIoT study and findings are my own work.
 
-\---
+
 
 ## ⚠️ Legal and ethical use
 
@@ -21,7 +21,7 @@ Running the attack-simulation component against any network, access point or dev
 * The **detection component is passive** and transmits nothing.
 * Neither the author of this project nor the author of the original tool accepts any liability for misuse.
 
-\---
+
 
 ## Background
 
@@ -44,17 +44,16 @@ Deauthentication frames are unauthenticated 802.11 management frames, which hist
 
 * Linux and Python 3.x
 * A wireless adapter that supports **monitor mode** and **packet injection**
-* [**scapy**](https://scapy.net/) — `pip install scapy`
+* [**scapy**](https://scapy.net/) - `pip install scapy`
 * **Root privileges** (raw 802.11 frames)
 * Any local helper modules included in this repository (e.g. `pull.py`)
 
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/dkgondaliya/IIot-wifi-deauth-research.git
+cd IIot-wifi-deauth-research
 pip install -r requirements.txt
-```
 
 Put your adapter into monitor mode first (for example with `airmon-ng start wlan0`), which exposes an interface such as `wlan0mon`.
 
@@ -78,7 +77,9 @@ Run the unit tests:
 python wifijammer.py --test
 ```
 
-> The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See \\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*Legal and ethical use\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\* above.
+> The attack-simulation component must only ever be used against devices and networks you own or are explicitly authorised to test. See
+
+Legal and ethical use above.
 
 ## Acknowledgements and licence
 
