@@ -15,7 +15,7 @@ The deauthentication engine is based on Dan McInerney's `wifijammer` (see acknow
 
 This project is published **strictly for education and authorised security research.** Transmitting deauthentication frames disrupts wireless connectivity and is an **active attack**.
 
-Running the attack-simulation component against any network, access point or device that you **do not own**, or **do not have explicit written authorisation to test**, is **illegal in most jurisdictions** — in the United Kingdom under the **Computer Misuse Act 1990** and the **Wireless Telegraphy Act 2006**, and elsewhere under equivalent computer-misuse and radio-interference laws.
+Running the attack-simulation component against any network, access point or device that you **do not own**, or **do not have explicit written authorisation to test**, is **illegal in most jurisdictions** in the United Kingdom under the **Computer Misuse Act 1990** and the **Wireless Telegraphy Act 2006**, and elsewhere under equivalent computer-misuse and radio-interference laws.
 
 * Use the attack component **only** inside an **isolated lab** or on infrastructure you are explicitly authorised to assess.
 * The **detection component is passive** and transmits nothing.
